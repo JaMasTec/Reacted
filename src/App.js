@@ -8,7 +8,7 @@ function App() {
 const [tasks, setTasks] = useState([
 {
   id:1,
-  text:'Cita con el Doctor',
+  text:'Cita con el doctor',
   day: '25 de agosto 2021',
   reminder: true
 },
