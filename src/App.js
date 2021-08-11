@@ -7,7 +7,7 @@ import Tasks from './components/Tasks'
 function App() {
 const [tasks, setTasks] = useState([
 {
-  id:1,
+  id:1, 
   text:'Cita con el doctor',
   day: '25 de agosto de 2021',
   reminder: true
