@@ -5,6 +5,6 @@ return(
     </button></h3>
     <p>{props.day}</p>
   </div>
-)
+      )
 }
 export default Task
