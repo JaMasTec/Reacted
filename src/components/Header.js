@@ -5,13 +5,11 @@ const Header = (props) =>{
     console.log('Click');
   }
 
-
 return(
   <header className='header'>
   <h1>{props.title}</h1>
-
-  <Button onClick={onClick} text='Nuevo'/>
-
+  {/*<Button onClick={onClick} text='Nuevo'/>*/}
+  <Button onClick={props.onAdd} text={props.showAdd ? 'x' : '+'}/>
   </header>
 )
 }

@@ -6,6 +6,7 @@ import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
 
 function App() {
+const [showAddTask, setShowAddTask]=useState(false)
 const [tasks, setTasks] = useState([
 {
   id:1,
@@ -40,6 +41,9 @@ const toggleReminder = (id) =>{
 
 const addTask = (task) =>{
    console.log(task);
+   const id =  Math.floor(Math.random()*10000) + 1
+   const newTask = {id, ...task}
+   setTasks([...tasks, newTask])
 }
 
 const nombre = 'Mascorro'
@@ -48,10 +52,8 @@ const y = !false
 
   return (
     <div>
-    <Header title='Recordatorios' />
-
-    <AddTask onAdd={addTask} />
-
+    <Header title='Recordatorios' onAdd={()=>setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
+    {showAddTask && <AddTask onAdd={addTask} />}
     <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
 
     </div>
