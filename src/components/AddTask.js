@@ -25,7 +25,7 @@ return(
       <input type='text' placeholder='Hora y Fecha' value={day} onChange={(e) => setDay(e.target.value)} />
     </div>
     <div className='form-control'>
-      <label>Recordarme?</label>
+      <label>¿Recordarme?</label>
       <input type='checkbox' value={reminder}  onChange={(e) => setReminder(e.currentTarget.checked)} />
     </div>
     <input className='btn btn-block' type='submit' value='Agregar' />
